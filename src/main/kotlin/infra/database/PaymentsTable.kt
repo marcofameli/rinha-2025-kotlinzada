@@ -1,7 +1,7 @@
 package infra.database
 
-import core.model.PaymentProcessor
-import core.model.PaymentStatus
+import payment.data.PaymentProcessor
+import payment.data.PaymentStatus
 import org.jetbrains.exposed.sql.Table
 import org.jetbrains.exposed.sql.javatime.timestamp
 
