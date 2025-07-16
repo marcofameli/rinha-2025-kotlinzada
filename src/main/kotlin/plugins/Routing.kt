@@ -1,9 +1,9 @@
 package br.com.plugins
 
-import core.model.Payment
-import core.model.PaymentRequest
-import core.model.PaymentStatus
-import core.ports.PaymentRepository
+import payment.data.Payment
+import payment.data.PaymentRequest
+import payment.data.PaymentStatus
+import payment.repository.PaymentRepository
 import infra.database.PostgresPaymentRepository
 import io.ktor.http.*
 import io.ktor.server.application.*

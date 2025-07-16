@@ -1,4 +1,4 @@
-package core.model
+package payment.data
 
 import kotlinx.serialization.Serializable
 import java.math.BigDecimal
@@ -25,30 +25,16 @@ data class Payment(
     var processedAt: Instant? = null
 )
 
-/**
- * Define os possíveis estados de um pagamento.
- */
-
 enum class PaymentStatus {
     PENDING,
     PROCESSED,
     FAILED
 }
 
-/**
- * Define quais processadores podemos usar.
- */
-
 enum class PaymentProcessor {
     DEFAULT,
     FALLBACK
 }
-
-// --- Modelos para o ticket RINHA-02 (já podemos deixar aqui) ---
-
-/**
- * Representa a resposta do endpoint GET /payments-summary.
- */
 
 @Serializable
 data class PaymentSummaryResponse(
@@ -62,6 +48,6 @@ data class SummaryDetails(
 
     @Serializable(with = BigDecimalSerializer::class)
     val totalAmount: BigDecimal = BigDecimal.ZERO
-
 )
+
 

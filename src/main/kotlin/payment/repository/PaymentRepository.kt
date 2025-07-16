@@ -1,6 +1,6 @@
-package core.ports
+package payment.repository
 
-import core.model.Payment
+import payment.data.Payment
 
 interface PaymentRepository {
 
